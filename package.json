@@ -1,16 +1,27 @@
 {
   "name": "json-schema-creator",
   "version": "1.0.0",
-  "description": "",
+  "description": "TypeScript library for dynamically creating JSON Schema compatible with AJV",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "/dist"
+    "dist/**/*.js",
+    "dist/**/*.d.ts",
+    "!dist/**/*.spec.*",
+    "!dist/**/*.test.*",
+    "README.md"
   ],
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "prepublishOnly": "npm run build",
+    "preversion": "npm run lint && npm test",
+    "version": "npm run build",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -19,7 +30,13 @@
   "keywords": [
     "json",
     "schema",
-    "creator"
+    "creator",
+    "ajv",
+    "validation",
+    "typescript",
+    "json-schema",
+    "builder",
+    "fluent"
   ],
   "author": "Mariusz Lejkowski",
   "license": "MIT",
@@ -38,5 +55,8 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.24.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
 }
