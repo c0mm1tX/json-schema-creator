@@ -1,5 +1,7 @@
 # JSON Schema Creator
 
+*Read this in other languages: [English](README.en.md), [Polski](README.md)*
+
 Biblioteka TypeScript do dynamicznego tworzenia schematów JSON Schema zgodnych z AJV.
 
 ## Instalacja
@@ -291,6 +293,92 @@ const userSchema = Schema.object('User')
 console.log(JSON.stringify(userSchema, null, 2));
 ```
 
+## Funkcje
+
+- ✅ **Pełne wsparcie TypeScript** z definicjami typów
+- ✅ **Fluent API** z łańcuchowaniem metod
+- ✅ **Kompatybilność z AJV** - generuje poprawne JSON Schema
+- ✅ **Pełne wsparcie JSON Schema Draft 7**
+- ✅ **Wyspecjalizowane klasy** dla różnych typów danych
+- ✅ **Metody convenience** dla popularnych wzorców
+- ✅ **Kompleksowe testy** z Jest
+- ✅ **Zero zależności** w produkcji
+- ✅ **Tree-shakable** - importuj tylko to czego potrzebujesz
+- ✅ **Dobrze udokumentowane** z przykładami
+
+## Wspierane funkcje JSON Schema
+
+### Podstawowe typy
+- `string`, `number`, `integer`, `boolean`, `array`, `object`, `null`
+
+### Walidacja stringów
+- `minLength`, `maxLength`, `pattern`, `format`
+- Wbudowane formaty: email, uri, date, date-time, time, uuid, ipv4, ipv6
+
+### Walidacja liczb
+- `minimum`, `maximum`, `exclusiveMinimum`, `exclusiveMaximum`, `multipleOf`
+
+### Walidacja tablic
+- `items`, `minItems`, `maxItems`, `uniqueItems`, `additionalItems`
+
+### Walidacja obiektów
+- `properties`, `required`, `additionalProperties`, `patternProperties`
+- `minProperties`, `maxProperties`
+
+### Kompozycja
+- `allOf`, `anyOf`, `oneOf`, `not`
+
+### Walidacja warunkowa
+- `if`, `then`, `else`
+
+### Wspólne właściwości
+- `enum`, `const`, `default`, `examples`
+
+### Właściwości meta
+- `$id`, `$schema`, `$ref`, `$comment`, `definitions`, `$defs`
+
+## Wkład w rozwój
+
+1. Zrób fork repozytorium
+2. Utwórz branch dla funkcji (`git checkout -b feature/amazing-feature`)
+3. Commituj zmiany (`git commit -m 'Add some amazing feature'`)
+4. Push do brancha (`git push origin feature/amazing-feature`)
+5. Otwórz Pull Request
+
+## Testowanie
+
+```bash
+# Uruchom testy
+npm test
+
+# Uruchom testy z pokryciem
+npm run test:coverage
+
+# Uruchom testy w trybie watch
+npm run test:watch
+```
+
+## Budowanie
+
+```bash
+# Zbuduj projekt
+npm run build
+
+# Sprawdź kod
+npm run lint
+
+# Napraw problemy z kodem
+npm run lint:fix
+```
+
 ## Licencja
 
-MIT
+MIT © [Mariusz Lejkowski](https://github.com/c0mm1tX)
+
+## Linki
+
+- [Repozytorium GitHub](https://github.com/c0mm1tX/json-schema-creator)
+- [Pakiet NPM](https://www.npmjs.com/package/json-schema-creator)
+- [Issues](https://github.com/c0mm1tX/json-schema-creator/issues)
+- [Specyfikacja JSON Schema](https://json-schema.org/)
+- [Walidator AJV](https://ajv.js.org/)

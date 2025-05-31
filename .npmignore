@@ -18,6 +18,7 @@ eslint.config.*
 tsconfig.json
 PUBLISHING.md
 CHANGELOG.md
+examples/
 
 # IDE
 .idea/
