@@ -26,22 +26,22 @@ class JsonSchemaCreator {
     }
 
 
-    enum(values: any[]) {
+    enum(values: unknown[]) {
         this.shape.enum = values;
         return this;
     }
 
-    const(value: any) {
+    const(value: unknown) {
         this.shape.const = value;
         return this;
     }
 
-    default(value: any) {
+    default(value: unknown) {
         this.shape.default = value;
         return this;
     }
 
-    examples(values: any[]) {
+    examples(values: unknown[]) {
         this.shape.examples = values;
         return this;
     }

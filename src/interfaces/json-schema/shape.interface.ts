@@ -35,10 +35,10 @@ export interface Shape {
     patternProperties?: { [pattern: string]: Shape };
     
     // Common properties
-    enum?: any[];
-    const?: any;
-    default?: any;
-    examples?: any[];
+    enum?: unknown[];
+    const?: unknown;
+    default?: unknown;
+    examples?: unknown[];
     
     // Conditional properties
     if?: Shape;
