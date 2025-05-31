@@ -1,0 +1,17 @@
+import JsonSchemaFactory from "./creator/json-schema.factory";
+import JsonSchemaCreator from "./creator/json-schema.creator";
+export { JsonSchemaCreator, JsonSchemaFactory };
+export { default as JsonSchemaInput } from "./creator/input/json-schema.input";
+export { default as JsonSchemaNumber } from "./creator/number/json-schema.number";
+export { default as JsonSchemaArray } from "./creator/array/json-schema.array";
+export { default as JsonSchemaObject } from "./creator/object/json-schema.object";
+export { Type } from "./interfaces/json-schema/type.interface";
+export { Shape } from "./interfaces/json-schema/shape.interface";
+export declare function createSchema(name: string): JsonSchemaCreator;
+export declare function createString(name: string): import("./creator/input/json-schema.input").default;
+export declare function createNumber(name: string): import("./creator/number/json-schema.number").default;
+export declare function createInteger(name: string): import("./creator/number/json-schema.number").default;
+export declare function createBoolean(name: string): JsonSchemaCreator;
+export declare function createArray(name: string): import("./creator/array/json-schema.array").default;
+export declare function createObject(name: string): import("./creator/object/json-schema.object").default;
+export declare const Schema: typeof JsonSchemaFactory;
