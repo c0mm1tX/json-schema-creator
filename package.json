@@ -1,6 +1,6 @@
 {
   "name": "json-schema-creator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TypeScript library for dynamically creating JSON Schema compatible with AJV",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
