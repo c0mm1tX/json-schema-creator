@@ -7,10 +7,10 @@ declare class JsonSchemaCreator {
     type(type: Type | Array<Type>): this;
     title(text: string): this;
     description(text: string): this;
-    enum(values: any[]): this;
-    const(value: any): this;
-    default(value: any): this;
-    examples(values: any[]): this;
+    enum(values: unknown[]): this;
+    const(value: unknown): this;
+    default(value: unknown): this;
+    examples(values: unknown[]): this;
     id(id: string): this;
     schema(schema: string): this;
     ref(ref: string): this;

@@ -27,10 +27,10 @@ export interface Shape {
     patternProperties?: {
         [pattern: string]: Shape;
     };
-    enum?: any[];
-    const?: any;
-    default?: any;
-    examples?: any[];
+    enum?: unknown[];
+    const?: unknown;
+    default?: unknown;
+    examples?: unknown[];
     if?: Shape;
     then?: Shape;
     else?: Shape;
